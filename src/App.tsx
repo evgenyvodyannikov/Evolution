@@ -1,17 +1,29 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import logo from './logo.svg';
 import './App.scss';
+import useInterval from './hooks/useInterval';
 
-function App() {
+const App = () => {
+
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const canvasX = 1920;
+  const canvasY = 1080;
+
+  useInterval(() => StartEvolution, 100)
+
+  const StartEvolution = () => {
+
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Eddit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <>
+      <canvas
+        className="EvolutionArea"
+        ref={canvasRef}
+        width={`${canvasX}px`}
+        height={`${canvasY}px`}
+      />
+    </>
   );
 }
 
