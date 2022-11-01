@@ -1,0 +1,14 @@
+.Container {
+    width: 100px;
+    height: 50px;
+    background: #4fe4ab;
+    border-radius: 100px/50px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+
+    .Text{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

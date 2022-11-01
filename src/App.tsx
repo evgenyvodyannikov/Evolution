@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import useInterval from './hooks/useInterval';
+import { Bacterium } from './components'
 
 const App = () => {
 
@@ -22,7 +23,10 @@ const App = () => {
         ref={canvasRef}
         width={`${canvasX}px`}
         height={`${canvasY}px`}
-      />
+        >
+          
+      </canvas>
+      <Bacterium/>
     </>
   );
 }
